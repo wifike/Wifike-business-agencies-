@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wifike Business Agencies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Wifike Business Agencies</h1>
+        <p>Your trusted partner for business ideas and professional business solutions.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#business-ideas">Business Ideas</a></li>
+            <li><a href="#business-solutions">Business Solutions</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Wifike Business Agencies empowers entrepreneurs with market research, business evaluation, and tailored strategies for growth.</p>
+    </section>
+
+    <section id="business-ideas">
+        <h2>Business Ideas</h2>
+
+        <h3>Capital: Ksh 0–10,000</h3>
+        <p>For business ideas that require a starting capital of Ksh 0–10,000.</p>
+        <button onclick="requestSTKPush('1000', 'small-business-idea')">Unlock for Ksh 1,000</button>
+        <div id="small-business-idea" style="display:none;">
+            <ul>
+                <li>Online Freelancing - Offer services like writing, data entry, and virtual assistance with minimal investment.</li>
+                <li>Homemade Snacks Business - Start making and selling snacks like crisps, popcorn, or samosas locally.</li>
+            </ul>
+        </div>
+
+        <h3>Capital: Ksh 10,000–30,000</h3>
+        <p>For business ideas that require a starting capital of Ksh 10,000–30,000.</p>
+        <button onclick="requestSTKPush('1500', 'medium-business-idea')">Unlock for Ksh 1,500</button>
+        <div id="medium-business-idea" style="display:none;">
+            <ul>
+                <li>Mitumba (Secondhand Clothes) Business - Buy and resell quality secondhand clothes with high returns.</li>
+                <li>Cosmetics Shop - Start a small-scale cosmetics retail business with essential products.</li>
+            </ul>
+        </div>
+
+        <h3>Capital: Ksh 30,000–50,000</h3>
+        <p>For business ideas that require a starting capital of Ksh 30,000–50,000.</p>
+        <button onclick="requestSTKPush('1800', 'large-business-idea')">Unlock for Ksh 1,800</button>
+        <div id="large-business-idea" style="display:none;">
+            <ul>
+                <li>Fast Food Kiosk - Set up a small but busy fast food joint offering popular meals.</li>
+                <li>Laundry Services - Offer laundry and ironing services in residential areas.</li>
+            </ul>
+        </div>
+
+        <h3>Capital: Ksh 50,000–100,000</h3>
+        <p>For business ideas that require a starting capital of Ksh 50,000–100,000.</p>
+        <button onclick="requestSTKPush('2000', 'premium-business-idea')">Unlock for Ksh 2,000</button>
+        <div id="premium-business-idea" style="display:none;">
+            <ul>
+                <li>Cyber Café - Offer internet services, printing, and computer-related work.</li>
+                <li>Small Agribusiness (Poultry) - Start poultry farming for meat or eggs.</li>
+            </ul>
+        </div>
+
+        <h3>Capital: Above Ksh 100,000</h3>
+        <p>For business ideas that require a starting capital of above Ksh 100,000.</p>
+        <button onclick="requestSTKPush('3000', 'high-end-business-idea')">Unlock for Ksh 3,000</button>
+        <div id="high-end-business-idea" style="display:none;">
+            <ul>
+                <li>Mini Supermarket - Open a well-stocked mini-mart serving a residential community.</li>
+                <li>Car Wash Business - Set up a professional car wash with modern equipment.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="business-solutions">
+        <h2>Business Solutions Services</h2>
+        <ol>
+            <li>
+                <strong>Business Idea Evaluation</strong>
+                <p>Assess the viability and profitability of your idea.</p>
+                <button onclick="requestSTKPush('5000', 'Business Idea Evaluation')">Book for Ksh 5,000</button>
+            </li>
+
+            <li>
+                <strong>Market Research</strong>
+                <p>Identify market gaps and understand customer needs.</p>
+                <button onclick="requestSTKPush('10000', 'Market Research')">Book for Ksh 10,000</button>
+            </li>
+        </ol>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Call: <a href="tel:0791530119" target="_blank">0791530119</a></p>
+        <p>WhatsApp: <a href="https://wa.me/254106468282" target="_blank">Click here to chat</a></p>
+        <p>Email: <a href="mailto:wifikedealers@gmail.com" target="_blank">wifikedealers@gmail.com</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100091416348112" target="_blank">Visit our Facebook page</a></p>
+    </section>
+
+    <script>
+        function requestSTKPush(amount, sectionId) {
+            const mobileNumber = prompt('Enter your mobile number for STK push payment:');
+            if (mobileNumber) {
+                alert(`STK push request for Ksh ${amount} sent to ${mobileNumber}. Unlocking after payment.`);
+                document.getElementById(sectionId).style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
